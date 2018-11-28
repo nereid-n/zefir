@@ -1,0 +1,18 @@
+$transition: all 0.3s ease
+
+$montserrat: 'Montserrat', sans-serif
+
+$main: #000000
+$white: #ffffff
+$light-pink: #E37599
+$pink: #FF0053
+
+@function gradient($direction: 'to bottom', $firstColor: $light-pink, $secondColor: $pink)
+  $value: linear-gradient($direction, $firstColor, $secondColor)
+
+$colors: (main: $main, white: $white, pink: $pink)
+
+$sm: 575px
+$md: 767px
+$lg: 991px
+$xl: 1199px

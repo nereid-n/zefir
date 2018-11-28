@@ -1,0 +1,27 @@
+mixin header()
+  header.header-wrap
+    .container
+      +b.header
+        +e.logo
+          img(src='assets/images/logo.png')
+        +e('nav').nav
+          -
+            var nav = [
+              'Описание',
+              'Виды услуг',
+              'Вопросы и ответы',
+              'Контакты'
+            ]
+          each item in nav
+            +e('a').nav-item(href='#')= item
+        +e.contacts
+          +e.contacts-item
+            +e.contacts-img
+              img(src='assets/images/icons/map-marker.svg').inject-me
+            span ул. Большая дорогомиловская, д. 4
+          +e.contacts-item
+            +e.contacts-img
+              img(src='assets/images/icons/phone.svg').inject-me
+            span +7 910 459-83-63
+        +e.inst
+          img(src='assets/images/icons/inst.svg')
