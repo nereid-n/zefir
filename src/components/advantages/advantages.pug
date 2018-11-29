@@ -1,0 +1,41 @@
+mixin advantages()
+  section.advantages-wrap
+    .container
+      +b.advantages
+        h2.title.mb10 Наши преимущества
+        p.text-center.mt10 Всегда качественный результат надолго!
+        +e.items
+          -
+            var items = [
+              {
+                title: 'Скорость',
+                text: 'Новейший лазер ускоряет процедуру'
+              },
+              {
+                title: 'Специалисты',
+                text: 'Профильное образование, опыт работы'
+              },
+              {
+                title: 'Комфорт',
+                text: 'Уютные залы, приятная музыка'
+              },
+              {
+                title: 'Уход',
+                text: 'Подбор материалов по типу кожи'
+              },
+              {
+                title: 'Консультации',
+                text: 'Бесплатно: при личной встрече или через интернет'
+              },
+              {
+                title: 'Место',
+                text: 'Удобная парковка, удобно добраться с любого конца города'
+              }
+            ]
+          each item, index in items
+            - var i = index + 1
+            +e.item
+              +e.img
+                img(src=`assets/images/icons/advantages/advantages${i}.png`)
+                h3.title-small.mt15.mb10= item.title
+                +e('p').text= item.text

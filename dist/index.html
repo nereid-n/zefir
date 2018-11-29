@@ -12,28 +12,150 @@
   <body>
     <div class="root">
       <header class="header-wrap">
-        <div class="container">
-          <div class="header">
-            <div class="header__logo"><img src="assets/images/logo.png"/>
-            </div>
-            <nav class="header__nav"><a class="header__nav-item" href="#">Описание</a><a class="header__nav-item" href="#">Виды услуг</a><a class="header__nav-item" href="#">Вопросы и ответы</a><a class="header__nav-item" href="#">Контакты</a>
-            </nav>
-            <div class="header__contacts">
-              <div class="header__contacts-item">
-                <div class="header__contacts-img"><img class="inject-me" src="assets/images/icons/map-marker.svg"/>
-                </div><span>ул. Большая дорогомиловская, д. 4</span>
+        <div class="header__top">
+          <div class="container">
+            <div class="header">
+              <div class="header__logo"><img src="assets/images/logo.png"/>
               </div>
-              <div class="header__contacts-item">
-                <div class="header__contacts-img"><img class="inject-me" src="assets/images/icons/phone.svg"/>
-                </div><span>+7 910 459-83-63</span>
+              <nav class="header__nav"><a class="header__nav-item" href="#">Описание</a><a class="header__nav-item" href="#">Виды услуг</a><a class="header__nav-item" href="#">Вопросы и ответы</a><a class="header__nav-item" href="#">Контакты</a>
+              </nav>
+              <div class="header__contacts">
+                <div class="header__contacts-item">
+                  <div class="header__contacts-img"><img class="inject-me" src="assets/images/icons/map-marker.svg"/>
+                  </div><span>ул. Большая дорогомиловская, д. 4</span>
+                </div>
+                <div class="header__contacts-item">
+                  <div class="header__contacts-img"><img class="inject-me" src="assets/images/icons/phone.svg"/>
+                  </div><span>+7 910 459-83-63</span>
+                </div>
               </div>
-            </div>
-            <div class="header__inst"><img src="assets/images/icons/inst.svg"/>
+              <div class="header__inst"><img src="assets/images/icons/inst.svg"/>
+              </div>
             </div>
           </div>
         </div>
+        <div class="banner"><img class="bg-img" src="assets/images/banner.png"/><img class="banner__arrow inject-me" src="assets/images/icons/arrow.svg" alt="" role="presentation"/>
+          <div class="container">
+            <h2 class="banner__title">Лазерная эпиляция в Москве <br>  на оборудовании нового поколения!
+            </h2>
+            <p class="banner__text">Глубокое бикини + подмышки всего за <span class='c-pink fw-semi-bold'>2490₽</span>
+            </p>
+            <button class="btn js-modal-btn" data-id="callback">Записаться</button>
+            <div class="banner__numbers">
+              <div class="banner__number">47
+              </div>
+              <div class="banner__number">59
+              </div>
+              <div class="banner__number">45
+              </div>
+            </div>
+          </div>
+          <div class="banner__icons"><img src="assets/images/icons/phone-in-circle.svg"/><img src="assets/images/icons/whatsapp.svg"/>
+          </div>
+        </div><img class="header__feathers" src="assets/images/feathers/feathers7.png"/>
       </header>
+      <div class="modal" id="callback">
+        <div class="modal__title"><span>Оставьте свои данные</span>
+          <button class="btn-close js-btn-close"><span></span><span></span></button>
+        </div>
+        <form class="modal__form">
+          <label class="width100"><span class="lable">Имя</span>
+            <input class="input width100" type="text"/>
+          </label>
+          <label class="width100"><span class="lable">Телефон</span>
+            <input class="input width100" type="phone"/>
+          </label>
+          <button class="btn">Отправить</button>
+        </form>
+      </div>
+      <div class="overlay"></div>
       <main class="main">
+        <section class="advantages-wrap">
+          <div class="container">
+            <div class="advantages">
+              <h2 class="title mb10">Наши преимущества</h2>
+              <p class="text-center mt10">Всегда качественный результат надолго!</p>
+              <div class="advantages__items">
+                <div class="advantages__item">
+                  <div class="advantages__img"><img src="assets/images/icons/advantages/advantages1.png"/>
+                    <h3 class="title-small mt15 mb10">Скорость</h3>
+                    <p class="advantages__text">Новейший лазер ускоряет процедуру
+                    </p>
+                  </div>
+                </div>
+                <div class="advantages__item">
+                  <div class="advantages__img"><img src="assets/images/icons/advantages/advantages2.png"/>
+                    <h3 class="title-small mt15 mb10">Специалисты</h3>
+                    <p class="advantages__text">Профильное образование, опыт работы
+                    </p>
+                  </div>
+                </div>
+                <div class="advantages__item">
+                  <div class="advantages__img"><img src="assets/images/icons/advantages/advantages3.png"/>
+                    <h3 class="title-small mt15 mb10">Комфорт</h3>
+                    <p class="advantages__text">Уютные залы, приятная музыка
+                    </p>
+                  </div>
+                </div>
+                <div class="advantages__item">
+                  <div class="advantages__img"><img src="assets/images/icons/advantages/advantages4.png"/>
+                    <h3 class="title-small mt15 mb10">Уход</h3>
+                    <p class="advantages__text">Подбор материалов по типу кожи
+                    </p>
+                  </div>
+                </div>
+                <div class="advantages__item">
+                  <div class="advantages__img"><img src="assets/images/icons/advantages/advantages5.png"/>
+                    <h3 class="title-small mt15 mb10">Консультации</h3>
+                    <p class="advantages__text">Бесплатно: при личной встрече или через интернет
+                    </p>
+                  </div>
+                </div>
+                <div class="advantages__item">
+                  <div class="advantages__img"><img src="assets/images/icons/advantages/advantages6.png"/>
+                    <h3 class="title-small mt15 mb10">Место</h3>
+                    <p class="advantages__text">Удобная парковка, удобно добраться с любого конца города
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="desc-wrap">
+          <div class="container">
+            <div class="desc">
+              <h2 class="title mt0">Описание процедуры</h2>
+              <div class="desc__main">
+                <div class="desc__text">
+                  <h3 class="title-dark mb30 mt0">Уникальная методика по удалению  нежелательных волос навсегда!</h3>
+                  <p>Лазерная  эпиляция на аппарате последнего поколения <span class='c-pink'>In-Motion</span> с диодным лазером - делает процесс удаления волос максимально комфортным и безболезненненым.</p>
+                  <p>Лазер не просто удалит нежелательные волосы но и изменит внешний вид кожи: цвет станет более ровный а кожа гладкой.</p>
+                  <p class="c-pink mt25">Вы получите гладкую и красивую кожу, притягивающую взгляды окружающих!</p>
+                  <button class="btn js-modal-btn" data-id="callback">Записаться</button>
+                </div>
+                <div class="desc__img"><img src="assets/images/desc.png"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="about">
+        </div>
+        <div class="types">
+        </div>
+        <div class="studio">
+        </div>
+        <div class="device">
+        </div>
+        <div class="experts">
+        </div>
+        <div class="faq">
+        </div>
+        <div class="reviews">
+        </div>
+        <div class="map">
+        </div>
       </main>
       <footer class="footer-wrap">
         <div class="container">

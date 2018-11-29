@@ -1,1 +1,89 @@
 @import "imports"
+
+.bg-img
+  +fit-cover
+
+.overlay
+  position: fixed
+  z-index: 1000
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba(0, 0, 0, 0.5)
+  opacity: 0
+  transition: $transition
+  visibility: hidden
+  &-active
+    opacity: 1
+    visibility: visible
+
+.modal
+  $p: 25px
+  position: fixed
+  z-index: 1001
+  top: 50%
+  left: 50%
+  width: 370px
+  padding: $p $p $p
+  max-width: calc(100% - 30px)
+  transform: translate(-50%, -50%)
+  background-color: #fff
+  opacity: 0
+  transition: $transition
+  visibility: hidden
+  &-active
+    opacity: 1
+    visibility: visible
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__title
+    $pTitle: 25px
+    padding: $pTitle - $p $pTitle $pTitle
+    margin: 0 (-$p) 30px
+    font-size: 18px
+    text-align: center
+    border-bottom: 1px solid #cccccc
+
+.btn-close
+  $size: 20px
+  $p: 0
+  +btn
+  +flex-center
+  position: absolute
+  top: 10px
+  right: 10px
+  width: $size
+  height: $size
+  padding: $p
+  cursor: pointer
+  span
+    position: absolute
+    display: inline-block
+    width: $size - $p * 2
+    height: 1px
+    background-color: $main
+    &:first-of-type
+      transform: rotate(45deg)
+    &:last-of-type
+      transform: rotate(-45deg)
+
+.width100
+  width: 100%
+
+.title
+  text-align: center
+  font-size: 24px
+  color: $pink
+  font-weight: 700
+
+.title-small
+  font-size: 18px
+  color: $pink
+  font-weight: 600
+
+.title-dark
+  font-weight: 600
+  font-size: 24px

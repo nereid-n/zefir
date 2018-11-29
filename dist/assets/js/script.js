@@ -17,4 +17,41 @@ if ($('.inject-me').length > 0) {
     }
   });
 }
+
+if (document.querySelector('.overlay')) {
+  var overlay = document.querySelector('.overlay');
+  overlay.onclick = modalClose;
+}
+
+if (document.querySelector('.js-modal-btn')) {
+  var btns = document.querySelectorAll('.js-modal-btn');
+
+  var _loop = function _loop(i) {
+    var btn = btns[i];
+    btn.onclick = function () {
+      var id = btn.dataset.id;
+      var modal = document.getElementById(id);
+      modal.classList.add('modal-active');
+      overlay.classList.add('overlay-active');
+    };
+  };
+
+  for (var i = 0; i < btns.length; i++) {
+    _loop(i);
+  }
+}
+
+if (document.querySelector('.js-btn-close')) {
+  var btnModalClose = document.querySelectorAll('.js-btn-close');
+  for (var i = 0; i < btnModalClose.length; i++) {
+    var _btn = btnModalClose[i];
+    _btn.onclick = modalClose;
+  }
+}
+
+function modalClose() {
+  var modal = document.querySelector('.modal-active');
+  modal.classList.remove('modal-active');
+  overlay.classList.remove('overlay-active');
+}
 //# sourceMappingURL=script.js.map

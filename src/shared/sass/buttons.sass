@@ -1,1 +1,14 @@
 @import "imports"
+
+.btn
+  +btn($pink)
+  display: inline-block
+  padding: 12px 50px
+  color: $white
+  background-image: gradient(to right)
+  border-radius: 50px
+  transition: $transition
+  &:hover
+    color: $white
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
+    transform: scale(1.1)

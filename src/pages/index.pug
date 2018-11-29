@@ -1,6 +1,27 @@
 extends ../components/layout-default/layout-default
+include ../components/advantages/advantages
+include ../components/desc/desc
+include ../components/about/about
+include ../components/types/types
+include ../components/studio/studio
+include ../components/device/device
+include ../components/experts/experts
+include ../components/faq/faq
+include ../components/reviews/reviews
+include ../components/map/map
+
 
 block head
     - var pageTitle = 'Index Page';
 
 block content
+  +advantages()
+  +desc()
+  +about()
+  +types()
+  +studio()
+  +device()
+  +experts()
+  +faq()
+  +reviews()
+  +map()

@@ -1,27 +1,58 @@
 mixin header()
   header.header-wrap
-    .container
-      +b.header
-        +e.logo
-          img(src='assets/images/logo.png')
-        +e('nav').nav
-          -
-            var nav = [
-              'Описание',
-              'Виды услуг',
-              'Вопросы и ответы',
-              'Контакты'
-            ]
-          each item in nav
-            +e('a').nav-item(href='#')= item
-        +e.contacts
-          +e.contacts-item
-            +e.contacts-img
-              img(src='assets/images/icons/map-marker.svg').inject-me
-            span ул. Большая дорогомиловская, д. 4
-          +e.contacts-item
-            +e.contacts-img
-              img(src='assets/images/icons/phone.svg').inject-me
-            span +7 910 459-83-63
-        +e.inst
-          img(src='assets/images/icons/inst.svg')
+    .header__top
+      .container
+        +b.header
+          +e.logo
+            img(src='assets/images/logo.png')
+          +e('nav').nav
+            -
+              var nav = [
+                'Описание',
+                'Виды услуг',
+                'Вопросы и ответы',
+                'Контакты'
+              ]
+            each item in nav
+              +e('a').nav-item(href='#')= item
+          +e.contacts
+            +e.contacts-item
+              +e.contacts-img
+                img(src='assets/images/icons/map-marker.svg').inject-me
+              span ул. Большая дорогомиловская, д. 4
+            +e.contacts-item
+              +e.contacts-img
+                img(src='assets/images/icons/phone.svg').inject-me
+              span +7 910 459-83-63
+          +e.inst
+            img(src='assets/images/icons/inst.svg')
+    +b.banner
+      img.bg-img(src='assets/images/banner.png')
+      +e('img').arrow.inject-me(src='assets/images/icons/arrow.svg')
+      .container
+        +e('h2').title Лазерная эпиляция в Москве <br>  на оборудовании нового поколения!
+        +e('p').text Глубокое бикини + подмышки всего за <span class='c-pink fw-semi-bold'>2490₽</span>
+        button.btn.js-modal-btn(data-id='callback') Записаться
+        +e.numbers
+          - var numbers = [47, 59, 45]
+          each item in numbers
+            +e.number= item
+      +e.icons
+        img(src='assets/images/icons/phone-in-circle.svg')
+        img(src='assets/images/icons/whatsapp.svg')
+    img.header__feathers(src='assets/images/feathers/feathers7.png')
+  +b.modal(id='callback')
+    +e.title
+      span Оставьте свои данные
+      button.btn-close.js-btn-close
+        span
+        span
+    +e('form').form
+      label.width100
+        span.lable Имя
+        input.input.width100(type='text')
+      label.width100
+        span.lable Телефон
+        input.input.width100(type='phone')
+      button.btn Отправить
+  .overlay

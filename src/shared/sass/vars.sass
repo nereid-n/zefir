@@ -7,8 +7,9 @@ $white: #ffffff
 $light-pink: #E37599
 $pink: #FF0053
 
-@function gradient($direction: 'to bottom', $firstColor: $light-pink, $secondColor: $pink)
+@function gradient($direction: to bottom, $firstColor: $light-pink, $secondColor: $pink)
   $value: linear-gradient($direction, $firstColor, $secondColor)
+  @return $value
 
 $colors: (main: $main, white: $white, pink: $pink)
 
