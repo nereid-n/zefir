@@ -1,2 +1,27 @@
+@import "../../shared/sass/imports"
+
 .studio
-	display: block
+  position: relative
+  &-wrap
+    padding: 20px 0
+  &__items
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: 0 -12px
+    @media (max-width: $xl)
+      justify-content: center
+  &__item
+    position: relative
+    width: 350px
+    max-width: 100%
+    height: 230px
+    margin: 12px
+    @media (max-width: $xl)
+      width: 330px
+    img
+      +fit-cover
+  &__feathers
+    position: absolute
+    top: -50px
+    left: 5%

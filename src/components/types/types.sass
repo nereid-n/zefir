@@ -1,2 +1,43 @@
+@import "../../shared/sass/imports"
+
 .types
-	display: block
+  &-wrap
+    padding: 20px 0
+  &__tabs
+    display: flex
+    justify-content: center
+    margin-bottom: 25px
+  &__tab
+    +btn
+    margin-left: -1px
+    padding: 12px 50px
+    color: $main
+    border: 1px solid
+    @media (max-width: $sm)
+      padding: 12px 30px
+    &:first-of-type
+      margin-left: 0
+      border-radius: 50px 0 0 50px
+    &:last-of-type
+      border-radius: 0 50px 50px 0
+    &.tab-active
+      position: relative
+      color: $pink
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 30px
+    padding: 30px 15px
+    background: #FFFFFF
+    box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.25)
+  &__img
+    $size: 200px
+    position: relative
+    width: $size
+    height: $size
+    max-width: 100%
+    border-radius: 50%
+    overflow: hidden
+    img
+      +fit-cover

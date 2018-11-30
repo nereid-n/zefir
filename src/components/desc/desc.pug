@@ -1,6 +1,7 @@
 mixin desc()
   section.desc-wrap
-    .container
+    .container.pos-relative
+      img.desc__feathers(src='assets/images/feathers/feathers3.png' alt='')
       +b.desc
         h2.title.mt0 Описание процедуры
         +e.main
@@ -11,4 +12,4 @@ mixin desc()
             p.c-pink.mt25 Вы получите гладкую и красивую кожу, притягивающую взгляды окружающих!
             button.btn.js-modal-btn(data-id='callback') Записаться
           +e.img
-            img(src='assets/images/desc.png')
+            img(src='assets/images/desc.png' alt='')

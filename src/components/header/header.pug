@@ -4,7 +4,7 @@ mixin header()
       .container
         +b.header
           +e.logo
-            img(src='assets/images/logo.png')
+            img(src='assets/images/logo.png' alt='')
           +e('nav').nav
             -
               var nav = [
@@ -18,17 +18,17 @@ mixin header()
           +e.contacts
             +e.contacts-item
               +e.contacts-img
-                img(src='assets/images/icons/map-marker.svg').inject-me
+                img(src='assets/images/icons/map-marker.svg' alt='').inject-me
               span ул. Большая дорогомиловская, д. 4
             +e.contacts-item
               +e.contacts-img
-                img(src='assets/images/icons/phone.svg').inject-me
+                img(src='assets/images/icons/phone.svg' alt='').inject-me
               span +7 910 459-83-63
           +e.inst
-            img(src='assets/images/icons/inst.svg')
+            img(src='assets/images/icons/inst.svg' alt='')
     +b.banner
       img.bg-img(src='assets/images/banner.png')
-      +e('img').arrow.inject-me(src='assets/images/icons/arrow.svg')
+      +e('img').arrow.inject-me(src='assets/images/icons/arrow.svg' alt='')
       .container
         +e('h2').title Лазерная эпиляция в Москве <br>  на оборудовании нового поколения!
         +e('p').text Глубокое бикини + подмышки всего за <span class='c-pink fw-semi-bold'>2490₽</span>
@@ -38,9 +38,9 @@ mixin header()
           each item in numbers
             +e.number= item
       +e.icons
-        img(src='assets/images/icons/phone-in-circle.svg')
-        img(src='assets/images/icons/whatsapp.svg')
-    img.header__feathers(src='assets/images/feathers/feathers7.png')
+        img(src='assets/images/icons/phone-in-circle.svg' alt='')
+        img(src='assets/images/icons/whatsapp.svg' alt='')
+    img.header__feathers(src='assets/images/feathers/feathers4.png' alt='')
   +b.modal(id='callback')
     +e.title
       span Оставьте свои данные

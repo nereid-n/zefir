@@ -1,3 +1,33 @@
 mixin about()
-	+b.about
-		block
+  section.about-wrap
+    .container.pos-relative
+      img.about__feathers1(src='assets/images/feathers/feathers2.png' alt='')
+      img.about__feathers2(src='assets/images/feathers/feathers5.png' alt='')
+      +b.about
+        h2.title О салоне в цифрах
+        +e.items
+          -
+            var items = [
+              {
+                circle: '5000+',
+                text: 'Довольных клиентов',
+                small: true
+              },
+              {
+                circle: '5',
+                text: 'Лет опыта'
+              },
+              {
+                circle: '5',
+                text: 'Видов эпиляции'
+              }
+            ]
+          each item in items
+            +e.item
+              +e.circle
+                +e('img').circle-border.inject-me(src='assets/images/icons/circle.svg' alt='')
+                if item.small
+                  +e('span').circle-text.__circle-text--small= item.circle
+                else
+                  +e('span').circle-text= item.circle
+              +e('span').item-text= item.text

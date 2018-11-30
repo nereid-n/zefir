@@ -1,3 +1,90 @@
 mixin types()
-	+b.types
-		block
+  section.types-wrap
+    .container
+      +b.types
+        h2.title.mb0 Виды процедур
+        h3.title-dark.text-center.mt15 Лазерная эпиляция
+        +e.tabs.tabs
+          +e('button').tab.tab.tab-active(data-id='female') Женская
+          +e('button').tab.tab(data-id='male') Мужская
+        .tab-content
+          .tab-item.tab-item-active(id='female')
+            .row
+              -
+                var items = [
+                  {
+                    text: 'Бикини классика',
+                    price: '1500₽'
+                  },
+                  {
+                    text: 'Глубокое бикини',
+                    price: '3000₽'
+                  },
+                  {
+                    text: 'Подмышечные впадины',
+                    price: '900₽'
+                  },
+                  {
+                    text: 'Ноги до колен',
+                    price: '3000₽'
+                  },
+                  {
+                    text: 'Ноги выше колен',
+                    price: '3000₽'
+                  },
+                  {
+                    text: 'Ноги полностью',
+                    price: '5000₽'
+                  },
+                  {
+                    text: 'Руки до локтя',
+                    price: '1500₽'
+                  },
+                  {
+                    text: 'Руки полностью',
+                    price: '3000₽'
+                  }
+                ]
+              each item, index in items
+                - var i = index + 1
+                .col-xl-3.col-lg-4.col-sm-6
+                  +e.item
+                    +e.img
+                      img(src=`assets/images/types/type-f${i}.png` alt='')
+                    span.mt25.mb25= item.text
+                    span.fz24.c-pink.fw-semi-bold= item.price
+          .tab-item(id='male')
+            .row
+              -
+                var items = [
+                  {
+                    text: 'Живот',
+                    price: '2000₽'
+                  },
+                  {
+                    text: 'Бикини',
+                    price: '4000₽'
+                  },
+                  {
+                    text: 'Подмышечные впадины',
+                    price: '1000₽'
+                  },
+                  {
+                    text: 'Грудь',
+                    price: '2000₽'
+                  },
+                  {
+                    text: 'Спина полностью',
+                    price: '4000₽'
+                  }
+                ]
+              each item, index in items
+                - var i = index + 1
+                .col-xl-3.col-lg-4.col-sm-6
+                  +e.item
+                    +e.img
+                      img(src=`assets/images/types/type-m${i}.png` alt='')
+                    span.mt25.mb25= item.text
+                    span.fz24.c-pink.fw-semi-bold= item.price
+        .d-flex.justify-content-center
+          a(href='#').btn.btn-border Ещё

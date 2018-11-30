@@ -1,16 +1,30 @@
 @import "../../shared/sass/imports"
 
 .desc
+  position: relative
   padding: 35px 50px
+  background-color: #fff
   box-shadow: 4px 0 20px rgba(0, 0, 0, 0.25)
+  @media (max-width: $sm)
+    padding: 35px 15px
+  &-wrap
+    padding: 30px 0
   &__main
     +flex-wrap
   &__text,
   &__img
     width: 50%
+    @media (max-width: $lg)
+      width: 100%
   &__text
     padding-right: 15px
     p
       margin: 20px 0
   &__img
     padding-top: 10px
+    @media (max-width: $lg)
+      padding-top: 30px
+  &__feathers
+    position: absolute
+    right: -40px
+    top: -60px

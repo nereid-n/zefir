@@ -1,3 +1,10 @@
 mixin studio()
-	+b.studio
-		block
+  section.studio-wrap
+    .container.pos-relative
+      img.studio__feathers(src='assets/images/feathers/feathers1.png' alt='')
+      +b.studio
+        h2.title Наша студия
+        +e.items
+          - for (var i = 1; i < 4; i++)
+            +e.item
+              img(src=`assets/images/studio${i}.png` alt='')

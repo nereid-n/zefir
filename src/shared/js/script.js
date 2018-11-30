@@ -43,10 +43,31 @@ if (document.querySelector('.js-btn-close')) {
   }
 }
 
-
-
 function modalClose() {
   let modal = document.querySelector('.modal-active');
   modal.classList.remove('modal-active');
   overlay.classList.remove('overlay-active');
+}
+
+if (document.querySelector('.tab')) {
+  let tabs = document.querySelectorAll('.tab');
+  for (let i = 0; i < tabs.length; i++) {
+    let tab = tabs[i];
+    tab.onclick = function() {
+      let id = this.dataset.id;
+      let target = document.getElementById(id);
+      let tabParent = this.closest('.tabs');
+      let targetParent = target.closest('.tab-content');
+      let tabActive = tabParent.querySelector('.tab-active');
+      let targetActive = targetParent.querySelector('.tab-item-active');
+      if (this !== tabActive) {
+        tabActive.classList.remove('tab-active');
+        this.classList.add('tab-active');
+      }
+      if (target !== targetActive) {
+        targetActive.classList.remove('tab-item-active');
+        target.classList.add('tab-item-active');
+      }
+    }
+  }
 }

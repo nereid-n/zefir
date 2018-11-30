@@ -54,4 +54,27 @@ function modalClose() {
   modal.classList.remove('modal-active');
   overlay.classList.remove('overlay-active');
 }
+
+if (document.querySelector('.tab')) {
+  var tabs = document.querySelectorAll('.tab');
+  for (var _i = 0; _i < tabs.length; _i++) {
+    var tab = tabs[_i];
+    tab.onclick = function () {
+      var id = this.dataset.id;
+      var target = document.getElementById(id);
+      var tabParent = this.closest('.tabs');
+      var targetParent = target.closest('.tab-content');
+      var tabActive = tabParent.querySelector('.tab-active');
+      var targetActive = targetParent.querySelector('.tab-item-active');
+      if (this !== tabActive) {
+        tabActive.classList.remove('tab-active');
+        this.classList.add('tab-active');
+      }
+      if (target !== targetActive) {
+        targetActive.classList.remove('tab-item-active');
+        target.classList.add('tab-item-active');
+      }
+    };
+  }
+}
 //# sourceMappingURL=script.js.map
