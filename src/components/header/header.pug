@@ -18,14 +18,15 @@ mixin header()
           +e.contacts
             +e.contacts-item
               +e.contacts-img
-                img(src='assets/images/icons/map-marker.svg' alt='').inject-me
+                img(src='assets/images/icons/map-marker.svg' alt='')
               span ул. Большая дорогомиловская, д. 4
             +e.contacts-item
               +e.contacts-img
-                img(src='assets/images/icons/phone.svg' alt='').inject-me
+                img(src='assets/images/icons/phone.svg' alt='')
               span +7 910 459-83-63
           +e.inst
-            img(src='assets/images/icons/inst.svg' alt='')
+            a(href='#')
+              img(src='assets/images/icons/inst.svg' alt='')
     +b.banner
       img.bg-img(src='assets/images/banner.png')
       +e('img').arrow.inject-me(src='assets/images/icons/arrow.svg' alt='')
@@ -38,21 +39,24 @@ mixin header()
           each item in numbers
             +e.number= item
       +e.icons
-        img(src='assets/images/icons/phone-in-circle.svg' alt='')
-        img(src='assets/images/icons/whatsapp.svg' alt='')
+        +e('a').icon(href='#')
+          img(src='assets/images/icons/phone-in-circle.svg' alt='')
+        +e('a').icon(href='#')
+          img(src='assets/images/icons/whatsapp.svg' alt='')
     img.header__feathers(src='assets/images/feathers/feathers4.png' alt='')
-  +b.modal(id='callback')
-    +e.title
-      span Оставьте свои данные
-      button.btn-close.js-btn-close
-        span
-        span
-    +e('form').form
-      label.width100
-        span.lable Имя
-        input.input.width100(type='text')
-      label.width100
-        span.lable Телефон
-        input.input.width100(type='phone')
-      button.btn Отправить
-  .overlay
+  .modal-wrap
+    +b.modal.js-modal(id='callback')
+      +e.title
+        span Оставьте свои данные
+        button.btn-close.js-btn-close
+          span
+          span
+      +e('form').form
+        label.width100
+          span.lable Имя
+          input.input.width100(type='text')
+        label.width100
+          span.lable Телефон
+          input.input.width100(type='phone')
+        button.btn Отправить
+    .overlay

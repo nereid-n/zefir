@@ -1,3 +1,14 @@
 mixin reviews()
-	+b.reviews
-		block
+  section.reviews-wrap
+    .container
+      +b.reviews
+        h2.title Отзывы
+        .row.mt30
+          - for (var i = 0; i < 3; i++)
+            .col-xl-4
+              +e.item
+                .avatar
+                  img(src='assets/images/expert1.png' alt='')
+                +e.text
+                  span.fz18.fw-semi-bold Анна
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam deleniti est eveniet expedita illum libero minima nemo neque numquam optio quis ratione, saepe sed sequi tenetur vitae! Facilis fugit maxime minima quae quidem ratione similique. Accusamus ad animi assumenda aut consequatur delectus eos fugiat minima nam odio odit, officia placeat quaerat, suscipit, tempora velit voluptates. Cum labore laudantium sint.

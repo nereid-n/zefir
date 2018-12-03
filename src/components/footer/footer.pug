@@ -2,3 +2,16 @@ mixin footer()
   footer.footer-wrap
     .container
       +b.footer
+        +e.item
+          +e.img
+            img(src='assets/images/icons/map-marker.svg' alt='')
+          span.fw-semi-bold ул. Большая дорогомиловская, д. 4
+        +e.item
+          +e.img
+            img(src='assets/images/icons/phone.svg' alt='')
+          span.fw-semi-bold +7 910 459-83-63
+        +e.social
+          +e('a').item(href='#')
+            +e('img').social-img(src='assets/images/icons/inst.svg' alt='')
+          +e('a').item(href='#')
+            +e('img').social-img(src='assets/images/icons/whatsapp.svg' alt='')

@@ -1,2 +1,14 @@
+@import "../../shared/sass/imports"
+
 .reviews
-	display: block
+  &__item
+    display: flex
+    margin-bottom: 30px
+    padding: 30px 25px
+    box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.25)
+    @media (max-width: $sm)
+      padding: 30px 15px
+  &__text
+    padding-left: 20px
+    @media (max-width: $sm)
+      padding-left: 15px

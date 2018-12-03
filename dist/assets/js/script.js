@@ -1,64 +1,51 @@
 'use strict';
 
-if ($('.inject-me').length > 0) {
-  var mySVGsToInject = document.querySelectorAll('img.inject-me');
-
-  // Options
-  var injectorOptions = {
-    evalScripts: 'once',
-    pngFallback: 'assets/png',
-    each: function each(svg) {}
-  };
-  SVGInjector(mySVGsToInject, injectorOptions, function (totalSVGsInjected) {
-    // Callback after all SVGs are injected
-    if ($(window).width() > 959) {
-      var topSideHeight = $('.headerCover').outerHeight(true);
-      $('#main section').first().css({ "padding-top": topSideHeight });
-    }
-  });
-}
-
 if (document.querySelector('.overlay')) {
-  var overlay = document.querySelector('.overlay');
-  overlay.onclick = modalClose;
+  var overlay = document.querySelectorAll('.overlay');
+  for (var i = 0; i < overlay.length; i++) {
+    overlay[i].onclick = function () {
+      var modal = this.closest('.modal-wrap');
+      modal.classList.remove('modal-active');
+    };
+  }
 }
 
 if (document.querySelector('.js-modal-btn')) {
   var btns = document.querySelectorAll('.js-modal-btn');
 
-  var _loop = function _loop(i) {
-    var btn = btns[i];
+  var _loop = function _loop(_i) {
+    var btn = btns[_i];
     btn.onclick = function () {
       var id = btn.dataset.id;
-      var modal = document.getElementById(id);
+      var modal = document.getElementById(id).closest('.modal-wrap');
       modal.classList.add('modal-active');
-      overlay.classList.add('overlay-active');
+      if (this.closest('.js-modal')) {
+        var zIndex = getComputedStyle(this.closest('.modal-wrap')).zIndex;
+        modal.style.zIndex = zIndex + 1;
+      }
     };
   };
 
-  for (var i = 0; i < btns.length; i++) {
-    _loop(i);
+  for (var _i = 0; _i < btns.length; _i++) {
+    _loop(_i);
   }
 }
 
 if (document.querySelector('.js-btn-close')) {
   var btnModalClose = document.querySelectorAll('.js-btn-close');
-  for (var i = 0; i < btnModalClose.length; i++) {
-    var _btn = btnModalClose[i];
-    _btn.onclick = modalClose;
+  for (var _i2 = 0; _i2 < btnModalClose.length; _i2++) {
+    var _btn = btnModalClose[_i2];
+    _btn.onclick = function () {
+      var modal = document.querySelector('.modal-active');
+      modal.classList.remove('modal-active');
+    };
   }
-}
-
-function modalClose() {
-  var modal = document.querySelector('.modal-active');
-  modal.classList.remove('modal-active');
-  overlay.classList.remove('overlay-active');
 }
 
 if (document.querySelector('.tab')) {
   var tabs = document.querySelectorAll('.tab');
-  for (var _i = 0; _i < tabs.length; _i++) {
-    var tab = tabs[_i];
+  for (var _i3 = 0; _i3 < tabs.length; _i3++) {
+    var tab = tabs[_i3];
     tab.onclick = function () {
       var id = this.dataset.id;
       var target = document.getElementById(id);

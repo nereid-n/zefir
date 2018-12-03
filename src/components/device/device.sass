@@ -1,2 +1,26 @@
+@import "../../shared/sass/imports"
+
 .device
-	display: block
+  &-wrap
+    padding: 20px 0 0
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin-top: 50px
+    @media (max-width: $lg)
+      flex-direction: column
+  &__item
+    width: calc(100% / 3)
+    text-align: center
+    @media (max-width: $lg)
+      width: 100%
+    &--small
+      min-height: 210px
+      margin-bottom: 30px
+      @media (max-width: $lg)
+        width: 100%
+    &-img
+      padding: 30px 10px
+  &__img
+    height: 125px
+    padding-bottom: 25px

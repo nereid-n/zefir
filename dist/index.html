@@ -21,15 +21,15 @@
               </nav>
               <div class="header__contacts">
                 <div class="header__contacts-item">
-                  <div class="header__contacts-img"><img class="inject-me" src="assets/images/icons/map-marker.svg" alt=""/>
+                  <div class="header__contacts-img"><img src="assets/images/icons/map-marker.svg" alt=""/>
                   </div><span>ул. Большая дорогомиловская, д. 4</span>
                 </div>
                 <div class="header__contacts-item">
-                  <div class="header__contacts-img"><img class="inject-me" src="assets/images/icons/phone.svg" alt=""/>
+                  <div class="header__contacts-img"><img src="assets/images/icons/phone.svg" alt=""/>
                   </div><span>+7 910 459-83-63</span>
                 </div>
               </div>
-              <div class="header__inst"><img src="assets/images/icons/inst.svg" alt=""/>
+              <div class="header__inst"><a href="#"><img src="assets/images/icons/inst.svg" alt=""/></a>
               </div>
             </div>
           </div>
@@ -50,25 +50,27 @@
               </div>
             </div>
           </div>
-          <div class="banner__icons"><img src="assets/images/icons/phone-in-circle.svg" alt=""/><img src="assets/images/icons/whatsapp.svg" alt=""/>
+          <div class="banner__icons"><a class="banner__icon" href="#"><img src="assets/images/icons/phone-in-circle.svg" alt=""/></a><a class="banner__icon" href="#"><img src="assets/images/icons/whatsapp.svg" alt=""/></a>
           </div>
         </div><img class="header__feathers" src="assets/images/feathers/feathers4.png" alt=""/>
       </header>
-      <div class="modal" id="callback">
-        <div class="modal__title"><span>Оставьте свои данные</span>
-          <button class="btn-close js-btn-close"><span></span><span></span></button>
+      <div class="modal-wrap">
+        <div class="modal js-modal" id="callback">
+          <div class="modal__title"><span>Оставьте свои данные</span>
+            <button class="btn-close js-btn-close"><span></span><span></span></button>
+          </div>
+          <form class="modal__form">
+            <label class="width100"><span class="lable">Имя</span>
+              <input class="input width100" type="text"/>
+            </label>
+            <label class="width100"><span class="lable">Телефон</span>
+              <input class="input width100" type="phone"/>
+            </label>
+            <button class="btn">Отправить</button>
+          </form>
         </div>
-        <form class="modal__form">
-          <label class="width100"><span class="lable">Имя</span>
-            <input class="input width100" type="text"/>
-          </label>
-          <label class="width100"><span class="lable">Телефон</span>
-            <input class="input width100" type="phone"/>
-          </label>
-          <button class="btn">Отправить</button>
-        </form>
+        <div class="overlay"></div>
       </div>
-      <div class="overlay"></div>
       <main class="main">
         <section class="advantages-wrap">
           <div class="container">
@@ -284,48 +286,174 @@
             <div class="device">
               <h2 class="title mb0">Аппарат для эпиляции</h2>
               <h3 class="title-dark text-center mt15">Innovatione 1S PRO IPLASER</h3>
-            </div>
-            <div class="items">
-              <div class="item">
-                <div class="item-small">
-                  <div class="img"><img src="" alt=""/>
+              <div class="device__items">
+                <div class="device__item">
+                  <div class="device__item--small">
+                    <div class="device__img"><img src="assets/images/icons/device/device1.png" alt=""/>
+                    </div><span class="fz18 c-pink fw-semi-bold">Загорелая кожа</span>
+                    <p>Эффективно удаляет волоски на загорелой коже. Можно проходить сеансы в любое время года</p>
+                  </div>
+                  <div class="device__item--small">
+                    <div class="device__img"><img src="assets/images/icons/device/device2.png" alt=""/>
+                    </div><span class="fz18 c-pink fw-semi-bold">Новейшая насадка</span>
+                    <p>Имеет охлаждающий эффект, что снижает или убирает болевые ощущения</p>
+                  </div>
+                  <div class="device__item--small">
+                    <div class="device__img"><img src="assets/images/icons/device/device3.png" alt=""/>
+                    </div><span class="fz18 c-pink fw-semi-bold">Без последствий</span>
+                    <p>Раздражения на коже, ожоги можно оставить в истории. Кожа будет совершенной после сеанса</p>
                   </div>
                 </div>
-                <div class="item-small">
-                  <div class="img"><img src="" alt=""/>
-                  </div>
+                <div class="device__item device__item-img"><img src="assets/images/device.png" alt=""/>
                 </div>
-                <div class="item-small">
-                  <div class="img"><img src="" alt=""/>
+                <div class="device__item">
+                  <div class="device__item--small">
+                    <div class="device__img"><img src="assets/images/icons/device/device4.png" alt=""/>
+                    </div><span class="fz18 c-pink fw-semi-bold">Все типы волос</span>
+                    <p>Удаляются даже темные, русые, рыжие, светлые волоски. Работаем с тонкими, пушкообразными структурами</p>
                   </div>
-                </div>
-                <div class="item-small">
-                  <div class="img"><img src="" alt=""/>
+                  <div class="device__item--small">
+                    <div class="device__img"><img src="assets/images/icons/device/device5.png" alt=""/>
+                    </div><span class="fz18 c-pink fw-semi-bold">Оперативность</span>
+                    <p>Высокая частота импульсов позволяет проводить сеанс быстро. Лазер испускает около 10 импульсов в секунду</p>
+                  </div>
+                  <div class="device__item--small">
+                    <div class="device__img"><img src="assets/images/icons/device/device6.png" alt=""/>
+                    </div><span class="fz18 c-pink fw-semi-bold">Точечное воздействие</span>
+                    <p>Реакция происходит только в фолликуле волоса. Клетки кожи не затрагиваются</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <div class="experts">
+        <section class="experts-wrap">
+          <div class="container pos-relative"><img class="experts__feathers1" src="assets/images/feathers/feathers3.png" alt=""/><img class="experts__feathers2" src="assets/images/feathers/feathers2.png" alt=""/>
+            <div class="experts">
+              <h2 class="title">Квалифицированные специалисты</h2>
+              <div class="d-flex flex-wrap justify-content-center">
+                <div class="experts__item"><img class="experts__img" src="assets/images/expert2.png" alt="" role="presentation"/><span class="fw-semi-bold fz18">Анастасия Мороз</span>
+                </div>
+                <div class="experts__item"><img class="experts__img" src="assets/images/expert1.png" alt="" role="presentation"/><span class="fw-semi-bold fz18">Алина Гималетдинова</span>
+                </div>
+                <div class="experts__item"><img class="experts__img" src="assets/images/expert1.png" alt="" role="presentation"/><span class="fw-semi-bold fz18">Екатерина Панурова</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button class="btn">Получить консультацию специалиста</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="faq-wrap">
+          <div class="container">
+            <div class="faq">
+              <h2 class="title">Часто задаваемые вопросы</h2>
+              <div class="faq__items">
+                <div class="faq__item">
+                  <h3 class="c-pink fz18 fw-semi-bold mt0">Долго ли действет эффект от процедуры?</h3>
+                  <p>Лазерная эпиляция дает результат навсегда в отличии от обычных методов депиляции</p>
+                </div>
+                <div class="faq__item">
+                  <h3 class="c-pink fz18 fw-semi-bold mt0">Это больно?</h3>
+                  <p>За счет использования охлаждающего геля болевых ощущений практически нет, есть легкое покалывание и ощущение тепла</p>
+                </div>
+                <div class="faq__item">
+                  <h3 class="c-pink fz18 fw-semi-bold mt0">Какой интервал должен быть между процедурами?</h3>
+                  <p>Раз в 3-4 недели, за это время фолликул успеет прорасти и необходимо будет повторить процедуру. На первой процедуре специалист расскажет подробнее об интервалах между сеансами</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="modal-wrap">
+          <div class="modal modal--big js-modal" id="contr">
+            <div class="modal__title"><span>Противопоказания</span>
+              <button class="btn-close js-btn-close"><span></span><span></span></button>
+            </div>
+            <ul class="list">
+              <li>заболевания кожи в острой или хронической форме, такие как дерматоз, псориаз, экзема и т.п.;</li>
+              <li>лица не достигшие 18-ти не допускаются до процедуры;</li>
+              <li>сахарный диабет;</li>
+              <li>герпес в стадии обострения;</li>
+              <li>онкологические заболевания;</li>
+              <li>аллергия на свет или солнце;</li>
+              <li>варикоз на месте обработки;</li>
+              <li>прием препаратов вызывающих изменения светочувствительности;</li>
+              <li>беременность и лактация;</li>
+              <li>ослабление иммунной системы;</li>
+              <li>проведение биоэпиляции в последние 30 дней;</li>
+              <li>наличие родинок и кожных повреждений;</li>
+              <li>простудные вирусные инфекции – ангина, грипп, ОРВИ;</li>
+              <li>аллергия в острой форме;</li>
+              <li>склонность к образованию на коже келоидных рубцов;</li>
+              <li>свежий загар независимо от того, естественный он или приобретен в солярии.</li>
+            </ul>
+            <div class="d-flex justify-content-center">
+              <button class="btn js-modal-btn" data-id="callback">Получить консультацию</button>
+            </div>
+          </div>
+          <div class="overlay"></div>
         </div>
-        <div class="faq">
-        </div>
-        <div class="reviews">
-        </div>
-        <div class="map">
-        </div>
+        <section class="reviews-wrap">
+          <div class="container">
+            <div class="reviews">
+              <h2 class="title">Отзывы</h2>
+              <div class="row mt30">
+                <div class="col-xl-4">
+                  <div class="reviews__item">
+                    <div class="avatar"><img src="assets/images/expert1.png" alt=""/></div>
+                    <div class="reviews__text"><span class="fz18 fw-semi-bold">Анна</span>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam deleniti est eveniet expedita illum libero minima nemo neque numquam optio quis ratione, saepe sed sequi tenetur vitae! Facilis fugit maxime minima quae quidem ratione similique. Accusamus ad animi assumenda aut consequatur delectus eos fugiat minima nam odio odit, officia placeat quaerat, suscipit, tempora velit voluptates. Cum labore laudantium sint.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4">
+                  <div class="reviews__item">
+                    <div class="avatar"><img src="assets/images/expert1.png" alt=""/></div>
+                    <div class="reviews__text"><span class="fz18 fw-semi-bold">Анна</span>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam deleniti est eveniet expedita illum libero minima nemo neque numquam optio quis ratione, saepe sed sequi tenetur vitae! Facilis fugit maxime minima quae quidem ratione similique. Accusamus ad animi assumenda aut consequatur delectus eos fugiat minima nam odio odit, officia placeat quaerat, suscipit, tempora velit voluptates. Cum labore laudantium sint.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4">
+                  <div class="reviews__item">
+                    <div class="avatar"><img src="assets/images/expert1.png" alt=""/></div>
+                    <div class="reviews__text"><span class="fz18 fw-semi-bold">Анна</span>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam deleniti est eveniet expedita illum libero minima nemo neque numquam optio quis ratione, saepe sed sequi tenetur vitae! Facilis fugit maxime minima quae quidem ratione similique. Accusamus ad animi assumenda aut consequatur delectus eos fugiat minima nam odio odit, officia placeat quaerat, suscipit, tempora velit voluptates. Cum labore laudantium sint.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="map-wrap">
+          <div class="container">
+            <div class="map"><iframe src="https://yandex.ua/map-widget/v1/-/CBFGN0HS0D" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="footer-wrap">
         <div class="container">
           <div class="footer">
+            <div class="footer__item">
+              <div class="footer__img"><img src="assets/images/icons/map-marker.svg" alt=""/>
+              </div><span class="fw-semi-bold">ул. Большая дорогомиловская, д. 4</span>
+            </div>
+            <div class="footer__item">
+              <div class="footer__img"><img src="assets/images/icons/phone.svg" alt=""/>
+              </div><span class="fw-semi-bold">+7 910 459-83-63</span>
+            </div>
+            <div class="footer__social"><a class="footer__item" href="#"><img class="footer__social-img" src="assets/images/icons/inst.svg" alt="" role="presentation"/></a><a class="footer__item" href="#"><img class="footer__social-img" src="assets/images/icons/whatsapp.svg" alt="" role="presentation"/></a>
+            </div>
           </div>
         </div>
       </footer>
     </div>
     <script src="assets/libs/jquery-3.3.1.min.js"></script>
     <script src="assets/libs/slick/slick.min.js"></script>
-    <script src="assets/libs/svg-injector.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

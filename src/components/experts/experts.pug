@@ -1,3 +1,23 @@
 mixin experts()
-	+b.experts
-		block
+  section.experts-wrap
+    .container.pos-relative
+      img.experts__feathers1(src='assets/images/feathers/feathers3.png' alt='')
+      img.experts__feathers2(src='assets/images/feathers/feathers2.png' alt='')
+      +b.experts
+        h2.title Квалифицированные специалисты
+        .d-flex.flex-wrap.justify-content-center
+          -
+            var items = [
+              'Анастасия Мороз',
+              'Алина Гималетдинова',
+              'Екатерина Панурова'
+            ]
+          each item, index in items
+            +e.item
+              if index === 0
+                +e.img(src='assets/images/expert2.png' alt='')
+              else
+                +e.img(src='assets/images/expert1.png' alt='')
+              span.fw-semi-bold.fz18= item
+        .d-flex.justify-content-center
+          button.btn Получить консультацию специалиста
