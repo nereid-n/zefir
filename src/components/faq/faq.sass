@@ -1,2 +1,22 @@
+@import "../../shared/sass/imports"
+
 .faq
-	display: block
+  padding: 10px 0 30px
+  &__item
+    margin-bottom: 25px
+    padding: 10px 70px 20px
+    box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.15)
+    @media (max-width: $md)
+      padding: 10px 25px 20px
+    @media (max-width: $sm)
+      padding: 10px 15px 20px
+    p
+      margin: 10px 0
+  &__btn
+    +btn
+    display: block
+    margin: 20px auto 0
+    padding: 0
+    border-bottom: 2px solid #E37599
+    &:hover
+      border-color: $pink
