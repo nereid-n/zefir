@@ -34,10 +34,7 @@ mixin header()
         +e('h2').title Лазерная эпиляция в Москве <br>  на оборудовании нового поколения!
         +e('p').text Глубокое бикини + подмышки всего за <span class='c-pink fw-semi-bold'>2490₽</span>
         button.btn.js-modal-btn(data-id='callback') Записаться
-        +e.numbers
-          - var numbers = [47, 59, 45]
-          each item in numbers
-            +e.number= item
+        +e.numbers(data-date='2018/12/13')
       +e.icons
         +e('a').icon(href='#')
           img(src='assets/images/icons/phone-in-circle.svg' alt='')

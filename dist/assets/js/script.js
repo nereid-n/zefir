@@ -64,4 +64,19 @@ if (document.querySelector('.tab')) {
     };
   }
 }
+
+if ($('.js-hide-wrap').length > 0) {
+  $('.js-hide-title').on('click', function () {
+    var item = $(this).parents('.js-hide-wrap').find('.js-hide-content');
+    item.slideToggle();
+  });
+}
+
+if ($('.banner__numbers').length > 0) {
+  var date = $('.banner__numbers').data('date');
+  $('.banner__numbers').countdown(date, function (event) {
+    var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+    $(this).html(event.strftime('<span class="banner__number">' + totalHours + '</span>' + '<span class="banner__number">%M</span>' + '<span class="banner__number">%S</span>'));
+  });
+}
 //# sourceMappingURL=script.js.map

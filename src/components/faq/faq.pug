@@ -52,16 +52,17 @@ mixin faq()
               }
             ]
           each item in items
-            +e.item
-              h3.c-pink.fz18.fw-semi-bold.mb10= item.title
-              if item.list
-                ul.list
-                  each li in item.list
-                    li= li
-              else
-                p= item.text
-                if item.link
-                  +e('button').btn.js-modal-btn(data-id='contr') Противопоказания
+            +e.item.js-hide-wrap
+              h3.c-pink.fz18.fw-semi-bold.mb10.mt20.js-hide-title= item.title
+              .js-hide-content
+                if item.list
+                  ul.list
+                    each li in item.list
+                      li= li
+                else
+                  p= item.text
+                  if item.link
+                    +e('button').btn.js-modal-btn(data-id='contr') Противопоказания
   .modal-wrap
     +b.modal.modal--big.js-modal(id='contr')
       +e.title

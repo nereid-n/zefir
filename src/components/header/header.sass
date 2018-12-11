@@ -99,18 +99,13 @@
     @media (max-width: $sm)
       font-size: 22px
   &__icons
-    position: absolute
+    position: fixed
+    z-index: 3
     left: 10px
     top: 50%
     display: flex
     flex-direction: column
     transform: translateY(-50%)
-    @media (max-width: $sm)
-      flex-direction: row
-      top: unset
-      bottom: 10px
-      left: 50%
-      transform: translateX(-50%)
   &__icon
     margin: 10px
   &__numbers
@@ -119,9 +114,10 @@
   &__number
     $size: 60px
     +flex-center
-    width: $size
+    min-width: $size
     height: $size
     margin: 3px
+    padding: 5px
     color: #ffffff
     font-size: 36px
     font-weight: 500

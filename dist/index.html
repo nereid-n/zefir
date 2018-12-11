@@ -41,13 +41,7 @@
             <p class="banner__text">Глубокое бикини + подмышки всего за <span class='c-pink fw-semi-bold'>2490₽</span>
             </p>
             <button class="btn js-modal-btn" data-id="callback">Записаться</button>
-            <div class="banner__numbers">
-              <div class="banner__number">47
-              </div>
-              <div class="banner__number">59
-              </div>
-              <div class="banner__number">45
-              </div>
+            <div class="banner__numbers" data-date="2018/12/13">
             </div>
           </div>
           <div class="banner__icons"><a class="banner__icon" href="#"><img src="assets/images/icons/phone-in-circle.svg" alt=""/></a><a class="banner__icon" href="#"><img src="assets/images/icons/whatsapp.svg" alt=""/></a>
@@ -148,7 +142,7 @@
               <h2 class="title">О салоне в цифрах</h2>
               <div class="about__items">
                 <div class="about__item">
-                  <div class="about__circle"><img class="about__circle-border inject-me" src="assets/images/icons/circle.svg" alt="" role="presentation"/><span class="about__circle-text about__circle-text--small">5000+</span>
+                  <div class="about__circle"><img class="about__circle-border inject-me" src="assets/images/icons/circle.svg" alt="" role="presentation"/><span class="about__circle-text about__circle-text--small">4783+</span>
                   </div><span class="about__item-text">Довольных клиентов</span>
                 </div>
                 <div class="about__item">
@@ -156,7 +150,7 @@
                   </div><span class="about__item-text">Лет опыта</span>
                 </div>
                 <div class="about__item">
-                  <div class="about__circle"><img class="about__circle-border inject-me" src="assets/images/icons/circle.svg" alt="" role="presentation"/><span class="about__circle-text">5</span>
+                  <div class="about__circle"><img class="about__circle-border inject-me" src="assets/images/icons/circle.svg" alt="" role="presentation"/><span class="about__circle-text">8</span>
                   </div><span class="about__item-text">Видов эпиляции</span>
                 </div>
               </div>
@@ -350,50 +344,66 @@
             <div class="faq">
               <h2 class="title">Часто задаваемые вопросы</h2>
               <div class="faq__items">
-                <div class="faq__item">
-                  <h3 class="c-pink fz18 fw-semi-bold mb10">Долго ли действет эффект от процедуры?</h3>
-                  <p>Лазерная эпиляция дает результат навсегда в отличии от обычных методов депиляции</p>
+                <div class="faq__item js-hide-wrap">
+                  <h3 class="c-pink fz18 fw-semi-bold mb10 mt20 js-hide-title">Долго ли действет эффект от процедуры?</h3>
+                  <div class="js-hide-content">
+                    <p>Лазерная эпиляция дает результат навсегда в отличии от обычных методов депиляции</p>
+                  </div>
                 </div>
-                <div class="faq__item">
-                  <h3 class="c-pink fz18 fw-semi-bold mb10">Это больно?</h3>
-                  <p>За счет использования охлаждающего геля болевых ощущений практически нет, есть легкое покалывание и ощущение тепла</p>
+                <div class="faq__item js-hide-wrap">
+                  <h3 class="c-pink fz18 fw-semi-bold mb10 mt20 js-hide-title">Это больно?</h3>
+                  <div class="js-hide-content">
+                    <p>За счет использования охлаждающего геля болевых ощущений практически нет, есть легкое покалывание и ощущение тепла</p>
+                  </div>
                 </div>
-                <div class="faq__item">
-                  <h3 class="c-pink fz18 fw-semi-bold mb10">Какой интервал должен быть между процедурами?</h3>
-                  <p>Раз в 3-4 недели, за это время фолликул успеет прорасти и необходимо будет повторить процедуру. На первой процедуре специалист расскажет подробнее об интервалах между сеансами</p>
+                <div class="faq__item js-hide-wrap">
+                  <h3 class="c-pink fz18 fw-semi-bold mb10 mt20 js-hide-title">Какой интервал должен быть между процедурами?</h3>
+                  <div class="js-hide-content">
+                    <p>Раз в 3-4 недели, за это время фолликул успеет прорасти и необходимо будет повторить процедуру. На первой процедуре специалист расскажет подробнее об интервалах между сеансами</p>
+                  </div>
                 </div>
-                <div class="faq__item">
-                  <h3 class="c-pink fz18 fw-semi-bold mb10">Сколько процедур необходимо?</h3>
-                  <p>Для полного удаления волос потребуется курс от 4 до 12 процедур. Темный и плотный волос разрушится за 4-6 процедур. Светлый и тонкий потребует до 12 сеансов. Лазер видит только пигмент. Соответственно, большое количество пигмента провоцирует сильное воздействие лазера</p>
+                <div class="faq__item js-hide-wrap">
+                  <h3 class="c-pink fz18 fw-semi-bold mb10 mt20 js-hide-title">Сколько процедур необходимо?</h3>
+                  <div class="js-hide-content">
+                    <p>Для полного удаления волос потребуется курс от 4 до 12 процедур. Темный и плотный волос разрушится за 4-6 процедур. Светлый и тонкий потребует до 12 сеансов. Лазер видит только пигмент. Соответственно, большое количество пигмента провоцирует сильное воздействие лазера</p>
+                  </div>
                 </div>
-                <div class="faq__item">
-                  <h3 class="c-pink fz18 fw-semi-bold mb10">Какое у вас оборудование?</h3>
-                  <p>Мы используем аппарат лазерного удаления волос Innovatione 1S PRO IPLASER. Год выпуска - 2018. Данный аппарат позволяет проводить максимально безболезненную процедуру за счет точных настроек исходя из типа кожи и охлаждения сапфирового наконечника</p>
+                <div class="faq__item js-hide-wrap">
+                  <h3 class="c-pink fz18 fw-semi-bold mb10 mt20 js-hide-title">Какое у вас оборудование?</h3>
+                  <div class="js-hide-content">
+                    <p>Мы используем аппарат лазерного удаления волос Innovatione 1S PRO IPLASER. Год выпуска - 2018. Данный аппарат позволяет проводить максимально безболезненную процедуру за счет точных настроек исходя из типа кожи и охлаждения сапфирового наконечника</p>
+                  </div>
                 </div>
-                <div class="faq__item">
-                  <h3 class="c-pink fz18 fw-semi-bold mb10">Есть ли противопоказания?</h3>
-                  <p>Есть противопоказания для определенных групп пациентов. Подробнее с противопоказаниями можно ознакомиться нажав на кнопку внизу</p>
-                  <button class="faq__btn js-modal-btn" data-id="contr">Противопоказания
-                  </button>
+                <div class="faq__item js-hide-wrap">
+                  <h3 class="c-pink fz18 fw-semi-bold mb10 mt20 js-hide-title">Есть ли противопоказания?</h3>
+                  <div class="js-hide-content">
+                    <p>Есть противопоказания для определенных групп пациентов. Подробнее с противопоказаниями можно ознакомиться нажав на кнопку внизу</p>
+                    <button class="faq__btn js-modal-btn" data-id="contr">Противопоказания
+                    </button>
+                  </div>
                 </div>
-                <div class="faq__item">
-                  <h3 class="c-pink fz18 fw-semi-bold mb10">Как подготовиться к процедуре?</h3>
-                  <ul class="list">
-                    <li>нельзя загорать 2дней до процедуры</li>
-                    <li>нельзя выдергивать волосы на эпилируемом участке за 2 недели до процедуры</li>
-                    <li>нельзя протирать эпилируемый участок кожи спиртосодержащими средствами в день процедуры</li>
-                    <li>за 1-2 дня до процедуры зону эпиляции следует тщательно выбрить</li>
-                  </ul>
+                <div class="faq__item js-hide-wrap">
+                  <h3 class="c-pink fz18 fw-semi-bold mb10 mt20 js-hide-title">Как подготовиться к процедуре?</h3>
+                  <div class="js-hide-content">
+                    <ul class="list">
+                      <li>нельзя загорать 2дней до процедуры</li>
+                      <li>нельзя выдергивать волосы на эпилируемом участке за 2 недели до процедуры</li>
+                      <li>нельзя протирать эпилируемый участок кожи спиртосодержащими средствами в день процедуры</li>
+                      <li>за 1-2 дня до процедуры зону эпиляции следует тщательно выбрить</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="faq__item">
-                  <h3 class="c-pink fz18 fw-semi-bold mb10">Как ухаживать за кожей после процедуры?</h3>
-                  <ul class="list">
-                    <li>7 дней после процедуры нельзя загорать</li>
-                    <li>2 дня после процедуры нельзя принимать горячую ванну</li>
-                    <li>2 дня после процедуры нельзя посещать бассейн с хлорированной водой</li>
-                    <li>2 дня после процедуры нельзя посещать сауны, бани</li>
-                    <li>2 дня после процедуры нельзя протирать зону эпиляции спиртосодержащими средствами</li>
-                  </ul>
+                <div class="faq__item js-hide-wrap">
+                  <h3 class="c-pink fz18 fw-semi-bold mb10 mt20 js-hide-title">Как ухаживать за кожей после процедуры?</h3>
+                  <div class="js-hide-content">
+                    <ul class="list">
+                      <li>7 дней после процедуры нельзя загорать</li>
+                      <li>2 дня после процедуры нельзя принимать горячую ванну</li>
+                      <li>2 дня после процедуры нельзя посещать бассейн с хлорированной водой</li>
+                      <li>2 дня после процедуры нельзя посещать сауны, бани</li>
+                      <li>2 дня после процедуры нельзя протирать зону эпиляции спиртосодержащими средствами</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -463,6 +473,7 @@
         </section>
         <section class="map-wrap">
           <div class="container">
+            <h2 class="title mt0 mb30">Как нас найти</h2>
             <div class="map"><iframe src="https://yandex.ua/map-widget/v1/-/CBFGN0HS0D" frameborder="0" allowfullscreen="true"></iframe>
             </div>
           </div>
@@ -487,6 +498,7 @@
     </div>
     <script src="assets/libs/jquery-3.3.1.min.js"></script>
     <script src="assets/libs/slick/slick.min.js"></script>
+    <script src="assets/libs/countdown.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
