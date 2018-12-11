@@ -15,7 +15,8 @@ if (document.querySelector('.js-modal-btn')) {
 
   var _loop = function _loop(_i) {
     var btn = btns[_i];
-    btn.onclick = function () {
+    btn.onclick = function (e) {
+      e.preventDefault();
       var id = btn.dataset.id;
       var modal = document.getElementById(id).closest('.modal-wrap');
       modal.classList.add('modal-active');
@@ -65,6 +66,53 @@ if (document.querySelector('.tab')) {
   }
 }
 
+function countNumber(item) {
+  var max = parseInt(item.innerHTML);
+  var k = 0;
+  var intervalNumber = setInterval(function () {
+    item.innerHTML = k;
+    if (max > 100) {
+      if (k + 91 < max) {
+        k += 91;
+      } else {
+        if (k + 11 < max) {
+          k += 11;
+        } else {
+          k++;
+        }
+      }
+    } else {
+      k++;
+    }
+    if (k === max) {
+      item.innerHTML = max;
+      clearInterval(intervalNumber);
+    }
+  }, 50);
+  item.classList.add('done');
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var numbers = [].slice.call(document.querySelectorAll('.js-number'));
+
+  if ("IntersectionObserver" in window) {
+    var numberObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var item = entry.target;
+          if (!item.classList.contains('done')) {
+            countNumber(item);
+          }
+        }
+      });
+    });
+
+    numbers.forEach(function (number) {
+      numberObserver.observe(number);
+    });
+  }
+});
+
 if ($('.js-hide-wrap').length > 0) {
   $('.js-hide-title').on('click', function () {
     var item = $(this).parents('.js-hide-wrap').find('.js-hide-content');
@@ -79,4 +127,10 @@ if ($('.banner__numbers').length > 0) {
     $(this).html(event.strftime('<span class="banner__number">' + totalHours + '</span>' + '<span class="banner__number">%M</span>' + '<span class="banner__number">%S</span>'));
   });
 }
+
+$(document).ready(function () {
+  if ($('.banner__icons').length > 0) {
+    $('.banner__icons').addClass('animate');
+  }
+});
 //# sourceMappingURL=script.js.map

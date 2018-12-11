@@ -7,3 +7,9 @@ if ($('.banner__numbers').length > 0) {
                                 '<span class="banner__number">%S</span>'));
   });
 }
+
+$(document).ready(function() {
+  if ($('.banner__icons').length > 0) {
+    $('.banner__icons').addClass('animate');
+  }
+});

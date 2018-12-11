@@ -12,7 +12,8 @@ if(document.querySelector('.js-modal-btn')) {
   let btns = document.querySelectorAll('.js-modal-btn');
   for (let i = 0; i < btns.length; i++) {
     let btn = btns[i];
-    btn.onclick = function() {
+    btn.onclick = function(e) {
+      e.preventDefault();
       let id = btn.dataset.id;
       let modal = document.getElementById(id).closest('.modal-wrap');
       modal.classList.add('modal-active');
@@ -57,3 +58,53 @@ if (document.querySelector('.tab')) {
     }
   }
 }
+
+function countNumber(item) {
+  var max = parseInt(item.innerHTML);
+  var k = 0;
+  var intervalNumber = setInterval(function () {
+    item.innerHTML = k;
+    if (max > 100) {
+      if (k + 91 < max) {
+        k += 91;
+      }
+      else {
+        if (k + 11 < max) {
+          k += 11;
+        }
+        else {
+          k++;
+        }
+      }
+    }
+    else {
+      k++;
+    }
+    if (k === max) {
+      item.innerHTML = max;
+      clearInterval(intervalNumber);
+    }
+  }, 50);
+  item.classList.add('done');
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var numbers = [].slice.call(document.querySelectorAll('.js-number'));
+
+  if ("IntersectionObserver" in window) {
+    var numberObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var item = entry.target;
+          if (!item.classList.contains('done')) {
+            countNumber(item);
+          }
+        }
+      });
+    });
+
+    numbers.forEach(function (number) {
+      numberObserver.observe(number);
+    });
+  }
+});

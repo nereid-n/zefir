@@ -27,7 +27,9 @@ mixin about()
               +e.circle
                 +e('img').circle-border.inject-me(src='assets/images/icons/circle.svg' alt='')
                 if item.small
-                  +e('span').circle-text.__circle-text--small= item.circle
+                  +e('span').circle-text.__circle-text--small
+                    span.js-number= item.circle
+                    span +
                 else
-                  +e('span').circle-text= item.circle
+                  +e('span').circle-text.js-number= item.circle
               +e('span').item-text= item.text

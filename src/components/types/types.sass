@@ -13,6 +13,10 @@
     padding: 12px 50px
     color: $main
     border: 1px solid
+    &:hover
+      color: #ffffff !important
+      background-color: $pink
+      border-color: $pink
     @media (max-width: $sm)
       padding: 12px 30px
     &:first-of-type
@@ -23,6 +27,7 @@
     &.tab-active
       position: relative
       color: $pink
+      pointer-events: none
   &__item
     display: flex
     flex-direction: column
