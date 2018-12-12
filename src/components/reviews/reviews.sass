@@ -12,3 +12,26 @@
     padding-left: 20px
     @media (max-width: $sm)
       padding-left: 15px
+
+.slider
+  &__btn
+    +btn
+    position: absolute
+    z-index: 1
+    top: 50%
+    transform: translateY(-50%)
+  &__prev
+    left: -50px
+    transform: rotate(90deg)
+  &__next
+    right: -50px
+    transform: rotate(-90deg)
+
+.reviews__slider
+  @media (max-width: 1250px)
+    margin-left: 5px !important
+    margin-right: 5px !important
+  .slick-track
+    display: flex
+    display: -webkit-box
+    align-items: center

@@ -41,7 +41,8 @@ mixin device()
                   span.fz18.c-pink.fw-semi-bold= item.title
                   p= item.text
           +e.item.__item-img
-            img(src='assets/images/device.png' alt='')
+            video(controls)
+              source(src='assets/images/IMG_2484.mov')
           +e.item
             each item, index in items
               if index >= 3

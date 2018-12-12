@@ -3,12 +3,19 @@ mixin reviews()
     .container
       +b.reviews
         h2.title Отзывы
-        .row.mt30
-          - for (var i = 0; i < 3; i++)
-            .col-xl-4
-              +e.item
-                .avatar
-                  img(src='assets/images/expert1.png' alt='')
-                +e.text
-                  span.fz18.fw-semi-bold Анна
-                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam deleniti est eveniet expedita illum libero minima nemo neque numquam optio quis ratione, saepe sed sequi tenetur vitae! Facilis fugit maxime minima quae quidem ratione similique. Accusamus ad animi assumenda aut consequatur delectus eos fugiat minima nam odio odit, officia placeat quaerat, suscipit, tempora velit voluptates. Cum labore laudantium sint.
+        +e.slider.row.mt30
+          -
+            var items = [
+              'FullSizeRender.jpg',
+              'IMG_7160.PNG',
+              'IMG_7161.PNG',
+              'IMG_7162.PNG',
+              'IMG_7280.PNG',
+              'IMG_7281.PNG',
+              'IMG_7282.PNG',
+              'IMG_7283.PNG',
+              'IMG_7284.PNG'
+            ]
+          each item in items
+            .col-12
+              img(src=`assets/images/reviews/${item}` alt='')
