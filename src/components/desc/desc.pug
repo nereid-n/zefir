@@ -12,4 +12,14 @@ mixin desc()
             p.c-pink.mt25 Вы получите гладкую и красивую кожу, притягивающую взгляды окружающих!
             button.btn.js-modal-btn(data-id='callback') Записаться
           +e.img
-            img(src='assets/images/desc.png' alt='')
+            +e.slider
+              -
+                var items = [
+                  'IMG_7118.JPG',
+                  'IMG_7119.JPG',
+                  'IMG_7120.JPG',
+                  'IMG_7121.JPG',
+                  'IMG_7304.JPG'
+                ]
+              each item in items
+                img(src=`assets/images/desc/${item}` alt='')

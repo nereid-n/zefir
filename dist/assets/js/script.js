@@ -113,6 +113,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+if ($('.desc__slider').length > 0) {
+  $('.desc__slider').slick({
+    adaptiveHeight: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2500
+  });
+}
+
 if ($('.js-hide-wrap').length > 0) {
   $('.js-hide-title').on('click', function () {
     var item = $(this).parents('.js-hide-wrap').find('.js-hide-content');
