@@ -20,12 +20,12 @@ mixin header()
               +e.contacts-img
                 img(src='assets/images/icons/map-marker.svg' alt='')
               span ул. Большая дорогомиловская, д. 4
-            +e.contacts-item
+            +e('a').contacts-item(href='tel:79104598363')
               +e.contacts-img
                 img(src='assets/images/icons/phone.svg' alt='')
               span +7 910 459-83-63
           +e.inst
-            a(href='#')
+            a(href='https://www.instagram.com/zeffirka.ru/')
               img(src='assets/images/icons/inst.svg' alt='')
     +b.banner
       img.bg-img(src='assets/images/banner.png')
@@ -36,9 +36,9 @@ mixin header()
         button.btn.js-modal-btn(data-id='callback') Записаться
         +e.numbers(data-date='2018/12/13')
       +e.icons
-        +e('a').icon(href='#')
+        +e('a').icon(href='tel:79104598363')
           img(src='assets/images/icons/phone-in-circle.svg' alt='')
-        +e('a').icon(href='#')
+        +e('a').icon(href='https://wa.me/79104598363')
           img(src='assets/images/icons/whatsapp.svg' alt='')
     img.header__feathers(src='assets/images/feathers/feathers4.png' alt='')
   .modal-wrap
