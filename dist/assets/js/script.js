@@ -131,6 +131,11 @@ if ($('.js-hide-wrap').length > 0) {
 
 if ($('.banner__numbers').length > 0) {
   var date = $('.banner__numbers').data('date');
+  var time = new Date(date).getTime();
+  if (new Date() - time > 0) {
+    var newDate = new Date(Date.now() + 1000 * 3600 * 24 * 2);
+    date = newDate.getFullYear() + '/' + (newDate.getMonth() + 1) + '/' + newDate.getDate();
+  }
   $('.banner__numbers').countdown(date, function (event) {
     var totalHours = event.offset.totalDays * 24 + event.offset.hours;
     $(this).html(event.strftime('<span class="banner__number">' + totalHours + '</span>' + '<span class="banner__number">%M</span>' + '<span class="banner__number">%S</span>'));

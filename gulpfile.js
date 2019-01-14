@@ -94,7 +94,7 @@ gulp.task('pug-build', function () {
         .pipe(plumber())
         .pipe(pug({pretty: true}))
         .pipe(gulpPugBeautify({omit_empty: false}))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./build'));
 });
 gulp.task('css-build', function () {
     gulp.src(['./src/shared/sass/**/*.sass', './src/components/**/*.sass'])
@@ -106,7 +106,7 @@ gulp.task('css-build', function () {
         .pipe(autoprefixer({
             browsers: ['> 1%', 'last 5 versions', 'Android >= 3', 'Firefox ESR', 'Opera 12.1']
         }))
-        .pipe(gulp.dest('./dist/assets/css'));
+        .pipe(gulp.dest('./build/assets/css'));
 });
 gulp.task('js-build', function () {
     gulp.src(['./src/shared/js/**/*.js', './src/components/**/*.js'])
@@ -118,16 +118,16 @@ gulp.task('js-build', function () {
         }))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./dist/assets/js'))
+        .pipe(gulp.dest('./build/assets/js'))
 });
 gulp.task('libs-build', function () {
     return gulp.src('./src/libs/**/*')
-        .pipe(gulp.dest('./dist/assets/libs'));
+        .pipe(gulp.dest('./build/assets/libs'));
 });
 gulp.task('images-build', function () {
     return gulp.src('./src/images/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./dist/assets/images'));
+        .pipe(gulp.dest('./build/assets/images'));
 });
 
 // Commands
